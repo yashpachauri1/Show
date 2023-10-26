@@ -17,7 +17,7 @@ function TaskItem({ task }) {
         <article className={classes.task}>
 
             <h1>{task.task}</h1>
-
+              <p>by</p>
             <p>{task.name}</p>
             <menu className={classes.actions}>
             <div className="form-check form-switch">
