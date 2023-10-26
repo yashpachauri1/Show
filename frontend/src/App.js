@@ -19,7 +19,7 @@ function App() {
         { index: true, element: <Home /> },
         { path: 'tasks', element: <TaskRoot />,
           children: [
-            { index: true, element: <Tasks />, loader: taskLoader },
+            { index:true, element: <Tasks />, loader: taskLoader },
             { path: 'newTask', element: <NewTask />, action: formAction },
             { path: ':taskId', element: <Details />, loader: detailsLoader, action: deleteAction, }
           ]
