@@ -1,0 +1,56 @@
+.task {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .task h1 {
+    font-size: 20px;
+    margin: 5px 0;
+    color: #333;
+    text-align: center;
+  }
+  
+  .task p {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0;
+    text-align: center;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .form-check {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .form-check-input {
+    margin-right: 10px;
+  }
+  
+  .actions button {
+    background-color: #dc3545; /* Red button background color */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .actions button:hover {
+    background-color: #c82333; /* Darker red on hover */
+  }
