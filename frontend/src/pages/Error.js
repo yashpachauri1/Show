@@ -21,6 +21,7 @@ const Error = () => {
   return (
     <>
       <MainHeader />
+      
       <PageContent title={title}>
         <p>{message}</p>
       </PageContent>
