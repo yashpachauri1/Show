@@ -1,9 +1,9 @@
-import { json, useLoaderData, Await } from "react-router-dom";
+import { json, useLoaderData, Await, defer } from "react-router-dom";
 import { Suspense } from 'react';
 import TaskList from "../components/TaskList";
 
 const Tasks = () => {
-    const tasks = useLoaderData();
+    const {tasks} = useLoaderData();
 
 
 
@@ -20,7 +20,7 @@ const Tasks = () => {
 
 export default Tasks;
 
-export async function loader() {
+export async function loadTasks() {
     const response = await fetch('http://localhost:5000/');
 
     if (!response.ok) {
@@ -38,4 +38,12 @@ export async function loader() {
         const resData = await response.json();
         return resData.events;
     }
+
+   
+}
+
+export function loader() {
+    return defer({
+      tasks: loadTasks(),
+    });
 }

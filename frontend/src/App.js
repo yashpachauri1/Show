@@ -17,10 +17,7 @@ function App() {
       errorElement: <Error />,
       children: [
         { index: true, element: <Home /> },
-        {
-          path: 'tasks',
-
-          element: <TaskRoot />,
+        { path: 'tasks', element: <TaskRoot />,
           children: [
             { index: true, element: <Tasks />, loader: taskLoader },
             { path: 'newTask', element: <NewTask />, action: formAction },

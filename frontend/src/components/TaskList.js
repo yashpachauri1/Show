@@ -9,9 +9,7 @@ function TaskList({ tasks }) {
     return (
         <div className={classes.tasks}>
             <h1>All Tasks</h1>
-            {!tasks && <div class="alert alert-danger" role="alert">
-            Could not fetch tasks
-            </div>}
+           
            {tasks &&  <ul className={classes.list}>
                 {tasks.map((task) => (
                     <li key={task._id} className={classes.item}>
