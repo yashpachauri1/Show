@@ -10,7 +10,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect(process.env.URI)
+mongoose.connect(process.env.URI,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
 .then(()=>{
     app.listen(process.env.PORT||8080, (error)=>{
         if(error) {
