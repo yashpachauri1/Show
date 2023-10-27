@@ -11,8 +11,11 @@ app.use(express.json());
 app.use(cors());
 
 mongoose.connect(process.env.URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    writeConcern: {
+      w: 'majority'
+    }
 })
 .then(()=>{
     app.listen(process.env.PORT||8080, (error)=>{
