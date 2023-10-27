@@ -19,7 +19,7 @@ export async function loader({ request, params }) {
 
     const taskId = params.taskId;
 
-    const response = await fetch(`http://localhost:5000/${taskId}`);
+    const response = await fetch(`https://just-le8p.onrender.com/${taskId}`);
     if (!response.ok) {
         return new Response(JSON.stringify({ message: 'Could not fetch events' }), { status: 500 });
     } else {
@@ -32,7 +32,7 @@ export async function action({ request, params }) {
 
     const taskId = params.taskId;
 
-    const response = await fetch(`http://localhost:5000/${taskId}`, {
+    const response = await fetch(`https://just-le8p.onrender.com/${taskId}`, {
         method: request.method
     });
     if (!response.ok) {

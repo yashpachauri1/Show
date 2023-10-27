@@ -64,7 +64,7 @@ export async function action({ request, params }) {
         task: data.get('task')
     }
 
-    const response = await fetch('http://localhost:5000/', {
+    const response = await fetch('https://just-le8p.onrender.com/', {
         method: 'POST',
         body: JSON.stringify(taskData),
         headers: {

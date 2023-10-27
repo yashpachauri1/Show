@@ -19,9 +19,9 @@ const Tasks = () => {
 }
 
 export default Tasks;
-
+//'http://localhost:5000/'
 export async function loader() {
-    const response = await fetch('http://localhost:5000/');
+    const response = await fetch('https://just-le8p.onrender.com/');
 
     if (!response.ok) {
         // return { isError: true, message: 'Could not fetch events.' };
