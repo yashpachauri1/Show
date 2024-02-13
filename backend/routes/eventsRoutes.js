@@ -1,25 +1,30 @@
 const express = require('express');
 const event = require('../models/event')
-
+const checkAuthMiddleware = require('../util/auth')
 const router = express.Router();
 
-router.get('/', async(req, res, next)=>{
-    try{
-        const allEvents = await event.find();
-        res.json({events:allEvents});
+ router.use(checkAuthMiddleware);
+ 
+ router.get('/', async (req, res, next) => {
+    const user_id = req.user._id;
+    try {
+        const allEvents = await event.find({user_id});
+        res.json({ events: allEvents });
+    } catch (error) {
+        console.log(error);
+        next(error);
+        return; // Add this line
     }
-    catch(error){
-        console.log(error)
-        next(error)
-    } 
 });
 
-router.post('/', async(req, res, next)=>{
 
+
+router.post('/', async(req, res, next)=>{
+    const user_id = req.user._id; // it comes from 'util/auth' we use it because of the only one user access there taks 
     const {name, task} = req.body
 
     try{
-        const addEvent = await event.create({name, task});
+        const addEvent = await event.create({name, task, user_id});
         // res.json({event:resposnse},{status:200})
         res.send(addEvent)
     }

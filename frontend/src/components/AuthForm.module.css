@@ -1,0 +1,29 @@
+.form{
+    max-width: 40rem;
+    margin: 2rem auto;
+}
+.form input,
+.form label{
+    display: block;
+    width: 100%;
+}
+
+.form input {
+    font: inherit;
+    padding: 0.25rem;
+}
+.actions{
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+    align-items: center;
+}
+.actions button{
+    font: inherit;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+}
+.errors{
+    display: flex;
+    list-style: none;
+}

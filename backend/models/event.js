@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+
 const eventSchema = mongoose.Schema({
     name: {
         type: String,
@@ -8,6 +9,10 @@ const eventSchema = mongoose.Schema({
     type: String,
     required: true
    },
+   user_id: {
+    type: String,
+    required: true
+   }
   
 
 });

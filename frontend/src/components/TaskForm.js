@@ -1,10 +1,12 @@
 import { Form, redirect, useNavigate, useNavigation, json, useActionData } from 'react-router-dom';
 import classes from './TaskForm.module.css'
+import { getAuthToken } from '../util/Auth';
 
 const TaskForm = ({ task }) => {
     const data = useActionData();
     const navigate = useNavigate();
     const navigation = useNavigation();
+     
 
     const isSubmitting = navigation.state === 'submitting';
 
@@ -58,24 +60,26 @@ export default TaskForm;
 
 export async function action({ request, params }) {
     const data = await request.formData();
-
+    const token = getAuthToken();
     const taskData = {
         name: data.get('name'),
         task: data.get('task')
     }
 
-    const response = await fetch('https://just-le8p.onrender.com/', {
+    const response = await fetch('http://localhost:5000/', {
         method: 'POST',
         body: JSON.stringify(taskData),
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Authorization": 'Bearar ' + token
         }
     })
     if (!response.ok) {
         throw json({ message: 'Could not save task' }, { status: 500 });
     }
     else {
-
+        const dt = await response.json();
+          console.log('done',dt)
         return redirect('/tasks');
     }
 

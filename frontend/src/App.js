@@ -7,16 +7,25 @@ import Tasks, { loader as taskLoader } from './pages/Tasks';
 import NewTask from './pages/NewTask';
 import { action as formAction } from './components/TaskForm';
 import Details, { loader as detailsLoader, action as deleteAction } from './pages/Details';
+import Auth from './pages/Auth';
+import {action as authAction} from './pages/Auth'
+import { tokenLoader } from './util/Auth';
+import { Logout } from './pages/Logout';
+import Dark from './components/Dark';
 
 function App() {
 
   const router = createBrowserRouter([
     {
-      path: '',
+      path: '/',
       element: <Root />,
+      id:'root',
+      loader:tokenLoader,
       errorElement: <Error />,
       children: [
-        { index: true,element: <Home /> },
+        { index: true, element: <Home /> },
+        {path:'auth', element:<Auth/> ,action:authAction},
+        {path:'logout', action:Logout},
         { path: 'tasks', element: <TaskRoot />,
           children: [
             { index:true, element: <Tasks />, loader: taskLoader },
@@ -31,6 +40,7 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />
+     
     </>
   );
 }

@@ -1,9 +1,10 @@
 import { useLoaderData, redirect, json } from "react-router-dom";
 import TaskItem from "../components/TaskItem";
+import { getAuthToken } from "../util/Auth";
 const Details = () => {
 
     const data = useLoaderData();
-
+    console.log("eve",data)
     const task = data.event
 
     return (
@@ -16,10 +17,15 @@ const Details = () => {
 export default Details
 
 export async function loader({ request, params }) {
-
+    const token = getAuthToken();
     const taskId = params.taskId;
-
-    const response = await fetch(`https://just-le8p.onrender.com/${taskId}`);
+    console.log(taskId)
+    const response = await fetch(`http://localhost:5000/${taskId}`,{
+        headers:{
+            'Authorization' : 'Bearer '+ token
+        
+        }
+    });
     if (!response.ok) {
         return new Response(JSON.stringify({ message: 'Could not fetch events' }), { status: 500 });
     } else {
@@ -31,9 +37,13 @@ export async function loader({ request, params }) {
 export async function action({ request, params }) {
 
     const taskId = params.taskId;
-
-    const response = await fetch(`https://just-le8p.onrender.com/${taskId}`, {
-        method: request.method
+    const token = getAuthToken();
+    const response = await fetch(`http://localhost:5000/${taskId}`, {
+        method: request.method,
+        headers:{
+            
+            'Authorization' : 'Bearer '+ token
+        }
     });
     if (!response.ok) {
         throw json({ message: 'Could not fetch details for selected event' }, { status: 500 }
