@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'YoungSerif';
+    src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    color: hsl(30, 10%, 34%);
+}
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: hsl(30, 54%, 90%);
+}
+
+.container {
+    max-width: 44rem;
+    padding: 1.6rem;
+    margin: 3rem auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about {
+    padding-top: 20px;
+}
+.about h2{
+    color: hsl(24, 5%, 18%);
+    font-size: 35px;
+}
+.about_pre {
+    padding: 2.5rem 2rem;
+}
+
+.about_pre ul {
+    padding: .5rem 1.7rem;
+    line-height: 35px;
+}
+
+.about_pre ul li span {
+    color: hsl(24, 5%, 18%);
+    font-weight: bold;
+}
+
+/* Example of applying the secondary font */
+.headings {
+    font-family: 'YoungSerif', serif;
+    color: hsl(14, 45%, 36%);
+}
+
+.about_pre ul li p {
+    font-size: 16px;
+    display: inline-block;
+    color: hsl(30, 10%, 34%);
+}
+
+#pre {
+    color: hsl(332, 51%, 32%);
+    font-family: 'Outfit', sans-serif;
+}
+
+.padd {
+    padding: 1rem 1.7rem;
+}
+
+.padd li {
+    padding: 7px 0;
+}
+
+.Instructions ol li p {
+    display: inline;
+
+}
+
+.Instructions ol li span {
+    color: hsl(24, 5%, 18%);
+    font-weight: bold;
+}
+
+#nutr_para{
+   padding-top: 1rem;
+}
+
+.nutr ul li {
+    border-bottom: 1px solid hsl(30, 10%, 34%);;
+    display: flex;
+    align-items: center; /* Ensure vertical alignment */
+    padding: 0.5rem 0; /* Adjust padding for spacing */
+}
+
+.nutr ul li span {
+    flex: 1; /* Allow span to take up available space */
+   
+ 
+}
+
+.nutr ul li p {
+    flex: 1; /* Allow p to take up available space */
+    text-align: center; /* Center the content of p */
+    margin: 0; /* Remove default margin */
+   color: hsl(14, 45%, 36%);
+}
+
+@media screen and (max-width:435px) {
+    .container {
+        max-width: 44rem;
+        padding: 1.8rem;
+        margin: auto;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 0px;
+    }
+    .image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 0px;
+    }
+    .image{
+        padding-bottom: 6rem;
+    }
+    .about{
+        padding-top:6rem ;
+    }
+   
+}
