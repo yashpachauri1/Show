@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:hsl(148, 38%, 91%) ;
+  }
+  /* - Green 200 (lighter): hsl(148, 38%, 91%)
+  - Green 600 (medium): hsl(169, 82%, 27%)
+  - Red: hsl(0, 66%, 54%) */
+  
+  
+  
+  /* - White: hsl(0, 0%, 100%)
+  - Grey 500 (medium): hsl(186, 15%, 59%)
+  - Grey 900 (darker): hsl(187, 24%, 22%) */
+  
+  .form{
+    background-color: white;
+    padding: 1.5rem 2rem;
+    width:35rem;
+    border-radius: 10px;
+  }
+  .form h2{
+    font-weight: 500;
+    padding-bottom: 10px;
+  }
+  .form p{
+    padding: 7px 0;
+  }
+  .form label{
+    display: block;
+    color: hsl(187, 24%, 22%);
+    padding:5px 0 ;
+  }
+  .name {
+    display: flex;
+    gap:10px;    
+  }
+  .name p{
+    width: 100%;
+  }
+  .textInput{
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border:  1px solid hsl(186, 15%, 59%);
+  }
+  .query {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+  }
+ 
+
+  .query p {
+    display: flex;
+    border:  1px solid hsl(186, 15%, 59%);
+    gap:10px;
+    width:100%;
+    border-radius: 6px;
+    padding: 0 1rem;
+    align-items: center;
+
+  }
+
+  .query p input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid hsl(148, 38%, 91%);
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  input[type=checkbox]:checked {
+    background-color: #555;
+  }
+
+
+
+  .form textarea{
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid hsl(186, 15%, 59%);
+  }
+  .term{
+    display: flex;
+    gap: 1rem;
+  }
+  .action button{
+    width: 100%;
+    padding:8px 0;
+    border-radius: 6px;
+    outline: none;
+    background-color:hsl(169, 82%, 27%) ;
+    border: 1px solid hsl(169, 82%, 27%);
+  }
+
+  .textInput{
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border:  1px solid hsl(186, 15%, 59%);
+  }
+  .textInput:hover,
+  .textInput:active{
+
+    border:  1.1px solid hsl(169, 82%, 27%);
+  }
+  .form textarea:hover,
+  .form textarea:active{
+
+    border:  1.1px solid hsl(169, 82%, 27%);
+  }
+  .error{
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border:  1px solid hsl(0, 66%, 54%);
+    /* background-color: hsl(0, 66%, 54%); */
+  }
+
+  .errorPara{
+    color:hsl(0, 66%, 54%);
+    font-size: 12px;
+  }
+
+  .required::after {
+    content: '*';
+    padding: 0 8px;
+    color: hsl(169, 82%, 27%);
+   
+  }
+
+ 
+  @media screen and (max-width: 412px) {
+    .container {
+      width: 100vw;
+      height: 100vh;
+      background-color: hsl(148, 38%, 91%);
+    }
+    .form {
+      background-color: white;
+      padding: 1.5rem 2rem;
+      border-radius: 10px;
+      margin: 0 1rem;
+    }
+    .name{
+      display: block;
+    }
+    .query{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
