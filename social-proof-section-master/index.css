@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./images/bg-pattern-top-mobile.svg'), url('./images/bg-pattern-bottom-mobile.svg');
+    background-position: top left, bottom right;
+    background-repeat: no-repeat, no-repeat;
+    height: 100vh;
+    font-family: 'Fraunces', serif;
+}
+
+.container {
+    max-width: 431px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.text-content {
+    text-align: center;
+}
+
+.left {
+    padding: 1rem 0;
+}
+
+.left h1 {
+    padding: 1rem;
+    color: hsl(300, 43%, 22%);
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.left p {
+    font-size: 19px;
+}
+
+.right {
+    padding: 1.5rem 0;
+}
+
+.right ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.right li {
+    border: none;
+    background-color: rgba(255, 101, 101, 0.083);
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 6px 0;
+}
+
+.right li .text {
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+    padding-top: 6px;
+}
+
+.card-container {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card {
+    width: 100%;
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.card .header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.card .header img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.card .name h2 {
+    color: hsla(0, 0%, 100%);
+}
+
+.card .name p {
+    color: hsl(333, 80%, 67%);
+}
+
+.main {
+    padding: 1rem 0;
+}
+
+.main p {
+    color: hsla(0, 0%, 100%, 0.945);
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    body {
+        background-image: url('./images/bg-pattern-top-mobile.svg'), url('./images/bg-pattern-bottom-mobile.svg');
+        background-size: contain;
+        height: auto;
+    }
+
+    .container {
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    .left h1 {
+        font-size: 32px;
+    }
+
+    .left p {
+        font-size: 16px;
+    }
+
+    .right li {
+        font-size: 18px;
+        padding: 8px 0;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .card .header img {
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: cover;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0.75rem;
+    }
+
+    .left h1 {
+        font-size: 28px;
+    }
+
+    .left p {
+        font-size: 14px;
+    }
+
+    .right li {
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .card .header img {
+        width: 35px;
+    }
+}
+
+@media (max-width: 360px) {
+    .left h1 {
+        font-size: 24px;
+    }
+
+    .left p {
+        font-size: 12px;
+    }
+
+    .right li {
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 0.75rem;
+    }
+
+    .card .header img {
+        width: 30px;
+    }
+}
+
+/* @media screen and(max-width:769px) {
+    body {
+        background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
+        
+        background-position: top left, bottom right;
+        background-repeat: no-repeat, no-repeat;
+        height: 100vh;
+        font-family: 'Fraunces', serif;
+    }
+    .container{
+        width: 75%;
+        background-color: aqua;
+    }
+} */
+
+@media (min-width: 769px) {
+    body {
+        background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
+        background-position: top left, bottom right;
+        background-size: auto;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .text-content {
+        display: flex;
+
+    }
+.left{
+    width: 45%;
+}
+    .left h1 {
+        font-size: 48px;
+    }
+
+    .left p {
+        font-size: 20px;
+    }
+
+    .right ul {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .right li {
+        font-size: 22px;
+        width: 100%;
+        padding: 10px 1.5rem;
+        width: auto;
+    }
+    .right .list-2{
+        position: relative;
+        left: 100px;
+    }
+    .right .list-3{
+        position: relative;
+        left: 200px;
+    }
+    .card-container {
+        flex-direction: row;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .card {
+        width: 48%;
+        padding: 2.5rem;
+    }
+
+    .card .header img {
+        width: 60px;
+    }
+    .card-2{
+        position: relative;
+        top :20px;
+    }
+    .card-3{
+        position: relative;
+        top:40px;
+    }
+}
