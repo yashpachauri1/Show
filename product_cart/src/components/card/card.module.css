@@ -1,0 +1,108 @@
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 100vw;
+    
+    
+  }
+  .container main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .container main img{
+    width: 100%;
+    border-radius: 6px;
+  }
+
+ .container main button{
+    display: flex;
+    border: 1px solid hsl(14, 65%, 9%);
+    background-color: white;
+    font-size: 30px;
+    padding: 9px 2rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    position: relative;
+    top: -33px;
+    gap: 7px;
+  }
+  .container main button img{
+    width: 50px;
+    
+  }
+  .container main button p{
+    color: hsl(14, 65%, 9%);
+    font-weight: 700;
+    
+  }
+  .container .name p{
+     padding-bottom: .5rem;
+     font-size: 30px;
+
+  } 
+  .dark{
+    color: hsl(14, 65%, 9%);
+    font-weight: 700;
+  }
+  .price{
+    color:hsl(14, 86%, 42%);
+    font-weight: 600;
+     font-size: 30px;
+  }
+
+  @media (min-width:769px) {
+    .container {
+      display: flex;
+      
+      padding: 0rem;
+      max-width: 18rem;
+      
+    }
+    .container main {
+      padding: 0;
+      width: 100%;
+    }
+    .container main img{
+      width: 100%;
+      border-radius: 6px;
+    }
+    .container main button{
+      font-size: 15px;
+      padding: 7px 1.8  rem;
+      position: relative;
+      top: -25px;
+      gap: 7px;
+    }
+    .container main button img{
+      width: 30px;
+      
+    }
+    .name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+    }
+    .container .name p{
+       padding: 0;
+       font-size: 17px;
+  
+    } 
+    .dark{
+      color: hsl(14, 65%, 9%);
+      font-weight: 700;
+    }
+    .price{
+      color:hsl(14, 86%, 42%);
+      font-weight: 600;
+       font-size: 17px;
+    }
+  
+}
