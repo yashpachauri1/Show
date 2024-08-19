@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif; /* Default font for your site */
+  }
+  
+.container {
+    padding: 8rem;
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr);  */
+    grid-template-areas: 
+        "header header header aside"
+        "header header header aside"
+        "main main main aside"
+        "main main main aside";
+    gap: 1rem;
+background-color: hsl(210, 46%, 95%);
+    
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 300px; /* Adjust this based on desired layout */
+    gap: 1rem;
+}
+
+aside {
+    grid-area: aside;
+    
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 300px 1fr; /* Adjust this based on desired layout */
+    gap: 1rem;
+}
+
+.box {
+    
+    padding: 1rem;
+    text-align: center;
+    height: 270px;
+}
+
+
+.single {
+    background-color: hsl(0, 0%, 100%);
+    width: 300px;
+    text-align: center;
+    height: 100%;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.header-big{
+    background: hsl(263, 55%, 52%);
+    background-image: url('./images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position:85% 5% ;
+    padding: 1.5rem;
+    border-radius: 10px;
+    height: 309.594px;
+}
+.header-small{
+    background: hsl(217, 19%, 35%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    height: 309.594px;
+}
+.main-big{
+    background: hsl(219, 29%, 14%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    height: 309.594px;
+}
+.main-small{
+    background: hsl(0, 0%, 100%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    height: 309.594px;
+}
+
+.head-content {
+   display: flex;
+   gap: .7rem;
+   align-items: center;
+   /* align-content: center; */
+}
+.head-content img{
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid hsl(0, 0%, 81%);
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+    gap:.1rem;
+    /* padding-top:5px ; */
+}
+.head-content h2{
+    font-size: 13px;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+}
+.head-content p{
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.491);
+    font-weight: 100;
+}
+.main-content{
+  
+    text-align:start
+}
+.main-content h1{
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  padding: 1rem 0;
+}
+.main-content p{
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.491);
+}
+
+.white h2{
+    color: hsl(218, 23%, 21%);
+}
+.white h1{
+    color:hsl(217, 19%, 35%);
+}
+.white p{
+    color:hsl(216, 15%, 56%);
+}
+
+@media (max-width:480px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .single{
+        width: 100%;
+        padding: 2.5rem;
+        height: auto;
+    }
+   .box{
+    padding: 2.5rem;
+    height: auto;
+   }
+   .head-content img{
+    width: 50px;
+   
+}
+    .head-content h2{
+        font-size: 16px;
+        font-weight: 300;
+     
+    }
+    .head-content p{
+        font-size: 15px;
+        font-weight: 300;
+     
+    }
+    .main-content h1{
+        font-size: 18px;
+        color: rgb(255, 255, 255);
+        
+      }
+      .main-content p{
+          font-size: 16px;
+          
+      }
+      .white h2{
+        color: hsl(218, 23%, 21%);
+    }
+    .white h1{
+        color:hsl(217, 19%, 35%);
+    }
+      
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .container {
+        padding: 4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "header header"
+            "main aside";
+        gap: 1rem;
+    }
+    header {
+        grid-template-columns: 1fr 1fr; /* Adjust for two-column layout */
+    }
+    main {
+        grid-template-columns: 1fr; /* Stacks elements vertically */
+    }
+    aside {
+        display: block; /* Ensures aside is visible */
+    }
+    .single {
+        width: 100%;
+        padding: 2rem;
+        height: auto;
+    }
+    .box {
+        padding: 2rem;
+        height: auto;
+    }
+    .head-content img {
+        width: 40px;
+    }
+    .head-content h2 {
+        font-size: 14px;
+    }
+    .head-content p {
+        font-size: 14px;
+    }
+    .main-content h1 {
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+    }
+    .main-content p {
+        font-size: 15px;
+    }
+    .white h2 {
+        color: hsl(218, 23%, 21%);
+    }
+    .white h1 {
+        color: hsl(217, 19%, 35%);
+    }
+}
