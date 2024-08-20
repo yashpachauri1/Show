@@ -1,0 +1,123 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.desktop-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.mobile {
+    display: none;
+}
+
+.content {
+    transition: filter 0.3s ease;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blurred {
+    filter: blur(5px); /* Adjust blur amount as needed */
+}
+.desktop-links li:hover,
+.desktop-links li:active,
+.mobile-links li:hover,
+.mobile-links li:active{
+ color:hsl(5, 85%, 63%); ;
+}
+
+@media (max-width: 480px) {
+    .desktop_nav-links {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+    }
+
+    .mobile_nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100vh;
+        z-index: 1;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .toggle {
+        background: white;
+        border: none;
+        align-self: flex-end;
+    }
+
+    .toggle_icon {
+        width: 35px;
+    }
+
+    .mobile-links {
+        list-style: none;
+        padding: 0;
+        padding-top: 2rem;
+        margin: 0;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        
+        gap: 2rem;
+    }
+    .mobile-links li{
+        font-size: 30px;
+    }
+}
+
+/* Tablet and small desktop styles */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .desktop_nav-links {
+        display: flex;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+
+    .mobile_nav-links {
+        display: none; /* Hide mobile menu on tablet */
+    }
+
+    .header {
+        padding: 1rem;
+    }
+
+    .toggle_icon {
+        width: 40px; /* Adjust icon size if needed */
+    }
+
+    /* Additional tablet-specific styling if needed */
+    .desktop-links li {
+        font-size: 18px; /* Adjust font size for tablets */
+    }
+
+    .header .logo img {
+        width: 120px; /* Adjust logo size for tablets */
+    }
+}
