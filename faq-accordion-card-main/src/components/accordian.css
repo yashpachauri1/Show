@@ -1,0 +1,223 @@
+.container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    border-radius: 15px;
+    padding: 20px; 
+    padding-bottom: 2rem;
+}
+
+.imgBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -30px; 
+    
+    transform: translateY(-74%);
+    
+}
+
+.image {
+    width: 200px;
+    filter: drop-shadow(0px 20px 15px rgba(0, 0, 0, 0.3)); 
+}
+
+.textBox {
+    width: 100%;
+    max-width: 600px; 
+    text-align: center;
+    margin-top: -20px; 
+}
+
+.faq-container {
+    margin-top: 20px; 
+    text-align: left;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0; /* Add a separator between items */
+    padding-bottom: 10px;
+}
+
+/* FAQ heading button */
+.faq-heading {
+    width: 100%;
+    background-color: white;   
+     padding: 10px;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s, padding 0.3s;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 1rem;
+    align-items: baseline;
+}
+
+
+.faq-heading:hover {
+    background-color: #e0e0e0;
+    padding-left: 15px; /* Add a slight padding on hover for effect */
+}
+
+/* FAQ content styling */
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s;
+    padding: 0 10px; /* Ensure content has some horizontal padding */
+    background-color: white;
+    border-radius: 5px;
+}
+
+.faq-content.active {
+    max-height: 200px; /* Ensure this is large enough for the content */
+    padding-top: 10px; /* Add padding when active to give space around text */
+}
+
+/* Paragraph inside FAQ content */
+.faq-content p {
+    margin: 0;
+    padding: 5px 0;
+}
+.img-desktop{
+    display: none;
+}
+
+@media (min-width:1025px) {
+    .container {
+        flex-direction: row; 
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        width: 70%;
+        border-radius: 15px;
+        padding: 4rem 2rem; 
+        overflow: hidden;    
+    }
+    .img-mobile{
+        display: none;
+    }
+    .img-desktop{
+        display: flex;
+    
+    }
+ 
+    .textBox{
+        width: 50%;
+       
+    }
+    .imgBox {
+        width: 60%;
+        position: static;
+     
+        
+    }
+    
+    .image {
+        width: 100%;
+        filter: drop-shadow(0px 20px 15px rgba(0, 0, 0, 0.3)); 
+        position: relative;
+        left: -80px;
+        z-index: -1;
+        transform: translatey(60%);
+        filter: drop-shadow(0px 90px 2px rgba(0, 0, 0, 0.3)); 
+    }
+
+   .textBox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+   }
+
+.faq-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0; /* Add a separator between items */
+    padding-bottom: 10px;
+}
+
+/* FAQ heading button */
+.faq-heading {
+    width: 100%;
+  
+    padding: 14px;
+    border: none;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+  
+    
+}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        width: 80%;
+        border-radius: 15px;
+        padding: 3rem 2rem; 
+        /* overflow: hidden;     */
+    }
+
+    .imgBox {
+        width: 63%;
+        margin-bottom: -20px;
+        transform: translateY(-70%);
+    }
+
+    .image {
+        width: 80%;
+        filter: drop-shadow(0px 20px 15px rgba(0, 0, 0, 0.3)); 
+    }
+
+    .textBox {
+        width: 100%;
+        max-width: 600px; 
+        text-align: center;
+        margin-top: -10px; 
+    }
+
+    .faq-container {
+        margin-top: 30px; 
+        text-align: left;
+        width: 100%;
+    }
+
+    .faq-heading {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .faq-content.active {
+        max-height: 200px;
+        padding-top: 10px;
+    }
+    
+    .textBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .img-mobile {
+        display: none;
+    }
+
+    .img-desktop {
+        display: flex;
+        width: 100%;
+    }
+}

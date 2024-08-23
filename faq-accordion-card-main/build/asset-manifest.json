@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8459bc17.css",
+    "main.js": "/static/js/main.9a9353d0.js",
+    "static/js/453.1e996c73.chunk.js": "/static/js/453.1e996c73.chunk.js",
+    "static/media/illustration-woman-online-mobile.svg": "/static/media/illustration-woman-online-mobile.fe928f9c476ef6d332672b3ab38268fd.svg",
+    "static/media/illustration-woman-online-desktop.svg": "/static/media/illustration-woman-online-desktop.843eb114c7213a596ee246bf87f27008.svg",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/illustration-box-desktop.svg": "/static/media/illustration-box-desktop.ec1ba14b853c562a663728483bac4824.svg",
+    "index.html": "/index.html",
+    "static/media/icon-arrow-down.svg": "/static/media/icon-arrow-down.852fa301a0e795e07c5966b1c156025f.svg",
+    "main.8459bc17.css.map": "/static/css/main.8459bc17.css.map",
+    "main.9a9353d0.js.map": "/static/js/main.9a9353d0.js.map",
+    "453.1e996c73.chunk.js.map": "/static/js/453.1e996c73.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8459bc17.css",
+    "static/js/main.9a9353d0.js"
+  ]
+}
